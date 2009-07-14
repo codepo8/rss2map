@@ -11,9 +11,9 @@ if(preg_match('/rss2map.php$/',$_SERVER["PHP_SELF"])){?>
 </head>
 <body>
 <?php }
-if(isset($_GET['feed'])){?>
+if(isset($_GET['feed']) && isset($rss2mapfeed)){?>
 <?php  
-  $url = $_GET['feed'];
+  $url = $rss2mapfeed || $_GET['feed'];
   $key = 'PbXUT7HV34Fq2KhMd68qS.CRZY9RWjW_dEQLgINMwG.eNxu2hf84BTkvHNttEg4-';
 
   // ^ get your own! 
