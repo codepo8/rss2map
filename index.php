@@ -15,6 +15,8 @@
       <li><a href="index.php?feed=http://www.telegraph.co.uk/travel/rss">Telegraph Travel</a></li>
       <li><a href="index.php?feed=http://www.telegraph.co.uk/news/rss">Telegraph News</a></li>
       <li><a href="index.php?feed=http://www.telegraph.co.uk/finance/rss">Telegraph Finance</a></li>
+      <li><a href="index.php?feed=http://rss.news.yahoo.com/rss/world">Yahoo World News</a></li>
+      <li><a href="index.php?feed=http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml">BBC World News</a></li>
     </ul>
     <?php include('rss2map.php');?>
   </div>
