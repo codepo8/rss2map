@@ -11,9 +11,9 @@ if(preg_match('/rss2map.php$/',$_SERVER["PHP_SELF"])){?>
 </head>
 <body>
 <?php }
-if(isset($_GET['feed']) && isset($rss2mapfeed)){?>
+if(isset($_GET['feed']) || isset($rss2mapfeed)){?>
 <?php  
-  $url = $rss2mapfeed || $_GET['feed'];
+  $url = isset($rss2mapfeed) ? $rss2mapfeed : $_GET['feed'];
   $key = 'PbXUT7HV34Fq2KhMd68qS.CRZY9RWjW_dEQLgINMwG.eNxu2hf84BTkvHNttEg4-';
 
   // ^ get your own! 
@@ -33,8 +33,8 @@ if(isset($_GET['feed']) && isset($rss2mapfeed)){?>
   function cleanup($elm){
     return preg_replace('/\n\r?+/','',addslashes($elm));
   }                                 
+  $output .= '[';
   if($places->channel->item){
-    $output .= '[';
     foreach($places->channel->item as $p){
       $locs = $p->clcontentlocation;
       if($locs){
