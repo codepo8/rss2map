@@ -1,0 +1,11 @@
+RSS2map is a script that uses Placemaker and Yahoo Maps to display any RSS feed on a map. You don't need to know how to use maps or Placemaker, simply provide the feed URL and include rss2map.php where you want the map to appear. 
+
+For example:
+
+<?php 
+  $rss2mapfeed = 'http://www.telegraph.co.uk/travel/rss';
+  include('rss2map.php');
+?>
+
+You can see an example of rss2map at 
+http://isithackday.com/hacks/rss2map/index.php?feed=http://rss.news.yahoo.com/rss/world
